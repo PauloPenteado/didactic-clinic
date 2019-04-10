@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="pacient")
-public class Pacient {
+@Table(name="patient")
+public class Patient {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,18 +42,18 @@ public class Pacient {
 	@Column(name="national_id")
 	private String nationalId;
 
-	public Pacient() {
+	public Patient() {
 		
 	}
 		
-	public Pacient(String firstName, String lastName, String bloodType) {
+	public Patient(String firstName, String lastName, String bloodType) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.bloodType = bloodType;
 	}
 
-	public Pacient(String firstName, String lastName, String email, String phone1, String phone2, Timestamp birthDate,
+	public Patient(String firstName, String lastName, String email, String phone1, String phone2, Timestamp birthDate,
 			String bloodType, String nationalId) {
 		super();
 		this.firstName = firstName;
