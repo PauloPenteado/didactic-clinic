@@ -6,13 +6,13 @@ import com.didactic.clinic.cruddemo.entity.Patient;
 
 public interface PatientDAO {
 
-	public List<Patient> getPacients();
+	public List<Patient> getPatients();
 	
-	public Patient getPacient(int id);
+	public Patient getPatient(int id);
 	
-	public void save(Patient pacient);
+	public void save(Patient patient);
 	
 	public void deleteById(int id);
 	
-	public void delete(Patient pacient);
+	public void delete(Patient patient);
 }

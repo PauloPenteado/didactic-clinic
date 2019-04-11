@@ -20,19 +20,19 @@ public class PatientRestController {
 	private PatientService patientService;
 	
 	@Autowired
-	public PatientRestController(PatientService pacientService) {
+	public PatientRestController(PatientService patientService) {
 		super();
-		this.patientService = pacientService;
+		this.patientService = patientService;
 	}
 
 	@GetMapping("/patients")
 	public List<Patient> getPatients(){
-		return patientService.getPacients();
+		return patientService.getPatients();
 	}
 	
 	@GetMapping("/patients/{id}")
 	public Patient getPatient(@PathVariable int id){
-		Patient patient = patientService.getPacient(id);
+		Patient patient = patientService.getPatient(id);
 		
 		if(patient==null) {
 			throw new RuntimeException("Patient ["+id+"] not found");
@@ -57,7 +57,7 @@ public class PatientRestController {
 	@DeleteMapping("/patients/{id}")
 	public Patient deletePatient(@PathVariable int id){
 		
-		Patient patient = patientService.getPacient(id);
+		Patient patient = patientService.getPatient(id);
 		patientService.deleteById(id);
 		return patient;
 	}

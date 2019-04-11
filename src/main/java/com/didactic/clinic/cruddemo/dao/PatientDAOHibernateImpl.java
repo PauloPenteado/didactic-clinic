@@ -23,7 +23,7 @@ public class PatientDAOHibernateImpl implements PatientDAO {
 	}
 	
 	@Override
-	public List<Patient> getPacients() {
+	public List<Patient> getPatients() {
 
 		Session currentSession = entityManager.unwrap(Session.class);
 		 
@@ -35,7 +35,7 @@ public class PatientDAOHibernateImpl implements PatientDAO {
 	}
 
 	@Override
-	public Patient getPacient(int id) {
+	public Patient getPatient(int id) {
 		
 		Session currentSession = entityManager.unwrap(Session.class);
 		

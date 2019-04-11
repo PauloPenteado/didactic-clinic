@@ -22,20 +22,20 @@ public class PatientServiceImpl implements PatientService {
 
 	@Override
 	@Transactional
-	public List<Patient> getPacients() {
-		return patientDAO.getPacients();
+	public List<Patient> getPatients() {
+		return patientDAO.getPatients();
 	}
 
 	@Override
 	@Transactional
-	public Patient getPacient(int id) {
-		return patientDAO.getPacient(id);
+	public Patient getPatient(int id) {
+		return patientDAO.getPatient(id);
 	}
 
 	@Override
 	@Transactional
-	public void save(Patient pacient) {
-		patientDAO.save(pacient);
+	public void save(Patient patient) {
+		patientDAO.save(patient);
 	}
 
 	@Override
