@@ -29,9 +29,9 @@ public class PatientDAOHibernateImpl implements PatientDAO {
 		 
 		Query<Patient> query = currentSession.createQuery("from Patient", Patient.class);
 		
-		List<Patient> pacients = query.getResultList();
+		List<Patient> patients = query.getResultList();
 		
-		return pacients;
+		return patients;
 	}
 
 	@Override
@@ -39,23 +39,23 @@ public class PatientDAOHibernateImpl implements PatientDAO {
 		
 		Session currentSession = entityManager.unwrap(Session.class);
 		
-		Patient pacient = currentSession.get(Patient.class, id);
+		Patient patient = currentSession.get(Patient.class, id);
 		
-		return pacient;
+		return patient;
 	}
 
 	@Override
-	public void save(Patient pacient) {
+	public void save(Patient patient) {
 		Session currentSession = entityManager.unwrap(Session.class);
 
-		currentSession.saveOrUpdate(pacient);
+		currentSession.saveOrUpdate(patient);
 	}
 
 	@Override
-	public void delete(Patient pacient) {
+	public void delete(Patient patient) {
 		Session currentSession = entityManager.unwrap(Session.class);
 
-		currentSession.delete(pacient);
+		currentSession.delete(patient);
 	}
 
 	@Override
